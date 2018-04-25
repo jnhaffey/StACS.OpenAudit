@@ -5,6 +5,7 @@
         Unknown = 0,
         View = 1,
         Change = 2,
-        Action = 3
+        Action = 3,
+        Statement = 4
     }
 }

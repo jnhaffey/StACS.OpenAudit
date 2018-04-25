@@ -17,7 +17,9 @@ namespace StACS.OpenAudit.Core.Extensions
         public static string ReportAllProperties<T>(this T instance) where T : class
         {
             if (instance == null)
+            {
                 return string.Empty;
+            }
 
             var strListType = typeof(List<string>);
             var strArrType = typeof(string[]);
@@ -30,10 +32,10 @@ namespace StACS.OpenAudit.Core.Extensions
             };
 
             var validProperties = instance.GetType()
-                .GetRuntimeProperties()
-                .Where(prop => handledTypes.Contains(prop.PropertyType))
-                .Where(prop => prop.GetValue(instance, null) != null)
-                .ToList();
+                                          .GetRuntimeProperties()
+                                          .Where(prop => handledTypes.Contains(prop.PropertyType))
+                                          .Where(prop => prop.GetValue(instance, null) != null)
+                                          .ToList();
 
             var format = $"{{0,-{validProperties.Max(prp => prp.Name.Length)}}} : {{1}}";
 

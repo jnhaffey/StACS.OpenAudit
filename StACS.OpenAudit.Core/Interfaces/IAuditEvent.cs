@@ -5,18 +5,20 @@ namespace StACS.OpenAudit.Core.Interfaces
 {
     public interface IAuditEvent : ISanitizeAndValidate
     {
-        OperationType OperationType { get; set; }
-        string EventType { get; set; }
-        DateTime Timestamp { get; set; }
-        string Description { get; set; }
-        string DataType { get; set; }
-        string DataId { get; set; }
-        string Data { get; set; }
-        bool IsSensitiveData { get; set; }
-        string ApplicationName { get; set; }
-        string MachineName { get; set; }
-        string UserId { get; set; }
-        string UserName { get; set; }
-        string UserEmail { get; set; }
+        OperationType OperationType { get; }
+        string EventType { get; }
+        DateTime Timestamp { get; }
+        string Description { get; }
+        string TargetId { get; }
+        string TargetType { get; }
+        string DataType { get; }
+        string DataId { get; }
+        string Data { get; }
+        bool IsSensitiveData { get; }
+        string ApplicationName { get; }
+        string MachineName { get; }
+        string UserId { get; }
+        string UserName { get; }
+        string UserEmail { get; }
     }
 }
