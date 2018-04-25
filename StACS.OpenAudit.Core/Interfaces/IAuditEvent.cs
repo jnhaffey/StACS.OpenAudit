@@ -3,7 +3,7 @@ using StACS.OpenAudit.Core.Enums;
 
 namespace StACS.OpenAudit.Core.Interfaces
 {
-    public interface IAuditEvent
+    public interface IAuditEvent : ISanitizeAndValidate
     {
         OperationType OperationType { get; set; }
         string EventType { get; set; }
@@ -12,14 +12,11 @@ namespace StACS.OpenAudit.Core.Interfaces
         string DataType { get; set; }
         string DataId { get; set; }
         string Data { get; set; }
-        bool IsEncrypted { get; set; }
+        bool IsSensitiveData { get; set; }
         string ApplicationName { get; set; }
         string MachineName { get; set; }
         string UserId { get; set; }
         string UserName { get; set; }
         string UserEmail { get; set; }
-        void Sanitize();
-        void Validate();
-        void SanitizeAndValidate();
     }
 }

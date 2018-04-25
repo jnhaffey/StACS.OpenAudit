@@ -1,17 +1,23 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using StACS.OpenAudit.Core.Attributes;
+using FluentValidation.Results;
 using StACS.OpenAudit.Core.Enums;
 using StACS.OpenAudit.Core.Extensions;
 using StACS.OpenAudit.Core.Interfaces;
+using StACS.OpenAudit.Core.Validation;
 
 namespace StACS.OpenAudit.Core.Models
 {
-    [AuditEventValidator]
     public class AuditEvent : IAuditEvent
     {
+        private readonly AuditEventValidator _validator;
+
+        public AuditEvent()
+        {
+            _validator = new AuditEventValidator();
+        }
+
         /// <summary>
         ///     Operation type performed.
         /// </summary>
@@ -35,13 +41,11 @@ namespace StACS.OpenAudit.Core.Models
         /// <summary>
         ///     Type of data with respect to event.
         /// </summary>
-        [RequiredTogetherWith("DataId")]
         public string DataType { get; set; }
 
         /// <summary>
         ///     Id of data with respect to event.
         /// </summary>
-        [RequiredTogetherWith("DataType")]
         public string DataId { get; set; }
 
         /// <summary>
@@ -50,9 +54,9 @@ namespace StACS.OpenAudit.Core.Models
         public string Data { get; set; }
 
         /// <summary>
-        ///     Flag indicating if data is encrypted.
+        ///     Flag indicating if data is sensitive.
         /// </summary>
-        public bool IsEncrypted { get; set; }
+        public bool IsSensitiveData { get; set; }
 
         /// <summary>
         ///     Application name that executed event.
@@ -67,13 +71,11 @@ namespace StACS.OpenAudit.Core.Models
         /// <summary>
         ///     Id of user that executed event.
         /// </summary>
-        [RequiredTogetherWith("UserName")]
         public string UserId { get; set; }
 
         /// <summary>
         ///     User name that executed event.
         /// </summary>
-        [RequiredTogetherWith("UserId")]
         public string UserName { get; set; }
 
         /// <summary>
@@ -100,9 +102,9 @@ namespace StACS.OpenAudit.Core.Models
         /// <summary>
         ///     Validates all properties
         /// </summary>
-        public void Validate()
+        public ValidationResult Validate()
         {
-            Validator.ValidateObject(this, new ValidationContext(this));
+            return _validator.Validate(this);
         }
 
         /// <summary>
