@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.Core", "StA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.Core.Tests", "StACS.OpenAudit.Core.Tests\StACS.OpenAudit.Core.Tests.csproj", "{95A45281-30E2-4060-833E-920711AA1593}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.Client", "StACS.OpenAudit.Client\StACS.OpenAudit.Client.csproj", "{52EA9015-1C18-4F57-9C76-A5616A680FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.Client.Tests", "StACS.OpenAudit.Client.Tests\StACS.OpenAudit.Client.Tests.csproj", "{08BFF496-CE55-47A2-B0B3-49940F06841D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.CosmosDb", "StACS.OpenAudit.CosmosDb\StACS.OpenAudit.CosmosDb.csproj", "{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{95A45281-30E2-4060-833E-920711AA1593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A45281-30E2-4060-833E-920711AA1593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A45281-30E2-4060-833E-920711AA1593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EA9015-1C18-4F57-9C76-A5616A680FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EA9015-1C18-4F57-9C76-A5616A680FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EA9015-1C18-4F57-9C76-A5616A680FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EA9015-1C18-4F57-9C76-A5616A680FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BFF496-CE55-47A2-B0B3-49940F06841D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BFF496-CE55-47A2-B0B3-49940F06841D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BFF496-CE55-47A2-B0B3-49940F06841D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BFF496-CE55-47A2-B0B3-49940F06841D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
