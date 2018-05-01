@@ -14,6 +14,9 @@
     <PackageTags>Audit</PackageTags>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="StACS.OpenAudit.Core" Version="0.1.0-unstable0025" />
+  </ItemGroup>
+  <ItemGroup>
     <DotNetCliToolReference Include="dotnet-setversion" Version="1.0.3" />
   </ItemGroup>
 </Project>
