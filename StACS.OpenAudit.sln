@@ -10,6 +10,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.Client.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StACS.OpenAudit.CosmosDb", "StACS.OpenAudit.CosmosDb\StACS.OpenAudit.CosmosDb.csproj", "{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{2E56B090-3DA2-44AD-A521-0B4B416B796D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EDF82961-A7F8-4981-B752-C3F4FB33B204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D5DE4CF4-3160-43D7-9FF3-EC323D53B553}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{936EE779-CC0A-4770-A26A-E11828F0C3C3}"
+ProjectSection(SolutionItems) = preProject
+	.gitattributes = .gitattributes
+	.gitignore = .gitignore
+	CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+	GitVersion.yml = GitVersion.yml
+	LICENSE = LICENSE
+	README.md = README.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +52,12 @@ Global
 		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52EA9015-1C18-4F57-9C76-A5616A680FD2} = {2E56B090-3DA2-44AD-A521-0B4B416B796D}
+		{08BFF496-CE55-47A2-B0B3-49940F06841D} = {2E56B090-3DA2-44AD-A521-0B4B416B796D}
+		{E4E7C2B2-D2C8-4F98-8AE1-EA7200D60A98} = {EDF82961-A7F8-4981-B752-C3F4FB33B204}
+		{95A45281-30E2-4060-833E-920711AA1593} = {EDF82961-A7F8-4981-B752-C3F4FB33B204}
+		{CD9E7AF1-5A94-48CB-850D-BD4FE93121E0} = {D5DE4CF4-3160-43D7-9FF3-EC323D53B553}
 	EndGlobalSection
 EndGlobal
